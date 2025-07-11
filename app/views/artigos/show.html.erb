@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @artigo %>
+
+<div>
+  <hr> <%# Uma linha horizontal para separar %>
+
+  <h3>Comentários</h3>
+  <% @artigo.comentarios.each do |comentario| %>
+    <div class="comentario">
+      <p><strong><%= comentario.body %></strong></p>
+    </div>
+  <% end %>
+
+  <hr>
+  <h3>Adicionar um comentário:</h3>
+
+  <%= form_with(model: [ @artigo, @artigo.comentarios.build ]) do |form| %>
+    <p>
+      <%= form.label :body, "Comentário" %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <em>Autor: <%= @artigo.user.email if @artigo.user %></em>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+
+
+  <%= link_to "Edit this artigo", edit_artigo_path(@artigo) %> |
+  <%= link_to "Back to artigos", artigos_path %>
+
+  <%= button_to "Destroy this artigo", @artigo, method: :delete %>
+</div>

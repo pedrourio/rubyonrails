@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+<% content_for :title, "Artigos" %>
+
+<div>
+  <h1>Artigos</h1>
+  <%= link_to "New artigo", new_artigo_path %>
+</div>
+
+
+<div id="artigos" >
+  <% @artigos.each do |artigo| %>
+    <%= render artigo %>
+    <p style="
+      border-radius: 0 0 10px 10px;
+      border: 0 0 2px 2px;
+      border: solid rgb(0, 0, 0);
+      border-top: none;
+      padding: 7px; margin-top:0px;
+      color: #007bff;
+      text-decoration: none;
+      
+      ">
+      <%= link_to "Show this artigo", artigo %>
+    </p>
+  <% end %>
+</div>
+
+
