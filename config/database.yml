@@ -24,10 +24,28 @@ test:
 # Store production database in the storage/ directory, which by default
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
-  <<: *default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  url: <%= ENV["DATABASE_URL"] %>
+  # Configuração para a aplicação principal (Active Record)
+  primary:
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+    url: <%= ENV["DATABASE_URL"] %>
+
+  # Configuração para o Solid Cable (Action Cable)
+  cable:
+    <<: *default
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
+
+  # Configuração para o Solid Queue
+  solid_queue:
+    <<: *default
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
+
+  # Configuração para o Solid Cache
+  solid_cache:
+    <<: *default
+    adapter: postgresql
+    url: <%= ENV["DATABASE_URL"] %>
