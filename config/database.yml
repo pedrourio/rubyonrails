@@ -38,8 +38,8 @@ production:
     adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
 
-  # Configuração para o Solid Queue
-  solid_queue:
+  # MUDANÇA AQUI: renomeie 'solid_queue' para 'queue'
+  queue:
     <<: *default
     adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
