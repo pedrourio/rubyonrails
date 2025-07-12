@@ -6,7 +6,8 @@ gem "rails", "~> 8.0.2"
 gem "propshaft"
 # Use sqlite3 como banco de dados para desenvolvimento e teste
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
+  # dentro do grupo :development, :test
+gem "sqlite3", ">= 2.0"
 end
 
 # Use pg como banco de dados para produção
