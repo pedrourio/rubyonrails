@@ -32,7 +32,7 @@ production:
     adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
 
-  solid_cache:
+  cache:
     <<: *default
     adapter: postgresql
     url: <%= ENV["DATABASE_URL"] %>
