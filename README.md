@@ -1,5 +1,3 @@
-Perfeito! Aqui está o seu `README` atualizado com um espaço reservado para o link de deploy no Render, já formatado e com destaque profissional:
-
 ---
 
 ## 📝 Projeto Ruby on Rails - CRUD de Artigos com Autenticação (Aplicação Full)
@@ -44,11 +42,6 @@ Este projeto foi desenvolvido com fins educacionais, com o foco em:
 ### 🚀 Como rodar o projeto localmente:
 
 1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/pedrourio/seu-repo.git
-   cd seu-repo
-   ```
 
 2. Instale as dependências:
 
