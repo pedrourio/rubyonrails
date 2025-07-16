@@ -78,7 +78,7 @@ Este projeto foi desenvolvido com fins educacionais, com o foco em:
 A aplicação está hospedada na plataforma **Render**, utilizando **PostgreSQL** como banco de dados em produção.
 
 🔗 **Acesse o projeto publicado aqui:**
-👉 [https://nome-do-seu-app.onrender.com](https://nome-do-seu-app.onrender.com)
+👉 [https://nome-do-seu-app.onrender.com](https://rubyonrails-xl7o.onrender.com)
 
 > Substitua esse link acima pelo endereço real gerado após o deploy na Render.
 
