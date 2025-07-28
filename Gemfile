@@ -12,7 +12,7 @@ end
 
 # Use pg como banco de dados para produção
 group :production do
-  gem "pg", "~> 1.1" 
+  gem "pg", "~> 1.6" 
 end
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
